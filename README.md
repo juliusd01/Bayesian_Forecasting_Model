@@ -1,4 +1,14 @@
 # Election Forecast for Bundestagswahl 2025 using Bayesian Statistics
+
+Main results for the national forecast:
+
+![Vote Share Forecast](results/5_poll_modell/posterior_5poll_model.png)
+![Vote Share Forecast](results/5_poll_modell/posterior_vote_share_5poll.png)
+![Vote Share Forecast](results/voter_preferences.png)
+
+Forecasts for each of the 16 states can be found in the results folder.
+
+
 ## Package overview
 ```txt
 📦Term_paper
@@ -17,6 +27,37 @@
  ┣ 📜plot_voter_preferences.py    # Script to generate Figure 11
  ┗ 📜requirements.txt
  ```
+
+## Replicate results
+
+- Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution)
+
+### Setup Environment
+1. Clone or download this repository
+2. Navigate to the project directory:
+   ```bash
+   cd /path/to/Bayesian_Forecasting_Model
+   ```
+
+3. Create the conda environment from the `environment.yml` file:
+   ```bash
+   conda env create -f environment.yml
+   ```
+
+4. Activate the environment:
+   ```bash
+   conda activate bayesian-forecast
+   ```
+
+### Run the Analysis
+Execute the main scripts to generate results:
+```bash
+python 2step.py             
+python 5poll_model.py 
+python plot_voter_preferences.py
+```
+
+Results will be saved in the `results/` folder.
 
 
 
